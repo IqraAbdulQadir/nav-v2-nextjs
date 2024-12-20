@@ -1,21 +1,23 @@
 // components/Navbar.tsx
 import React from "react";
-import { useRouter } from 'next/router';
+import Link from "next/link"
 
 const NavBar: React.FC = () => {
-    const router = useRouter();
 
     return (
         <nav className='bg-blue-400 p-4'>
             <ul className="flex space-x-4">
                 <li>
-                    <button onClick={() => router.push('/')} className='font-semibold text-white'>Home</button>
+                    <Link href="/" className='font-semibold text-white'>Home</Link> 
                 </li>
                 <li>
-                    <button onClick={() => router.push('/about')} className='font-semibold text-white'>About</button>
+                    <Link href="/about" className='font-semibold text-white'>About</Link> 
                 </li>
                 <li>
-                    <button onClick={() => router.push('/contact')} className='font-semibold text-white'>Contact</button>
+                    <Link href="/contact" className='font-semibold text-white'>Contact</Link> 
+                </li>
+                <li>
+                    <Link href="/navbar" className="font-semibold text-white">Navigation</Link>
                 </li>
             </ul>
         </nav>
